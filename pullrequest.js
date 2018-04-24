@@ -1,7 +1,7 @@
 var superagent = require('superagent');
-function pullreq() {
+function pullreq(key) {
     superagent.post('https://api.github.com/repos/ArvindBP/Testing/pulls')
-        .set('Authorization', 'Bearer 2c245f672d858d116c0e3f62015a187c4c47b8ed')
+        .set('Authorization', `Bearer ${key}` )
         .set('Content-Type', 'application/json')
         .send(`{
   		"title": "TestSL",
